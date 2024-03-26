@@ -10,14 +10,21 @@
         <img src="static/images/floydmayweather2.png" alt="Boxing Legends Image">
         <h2>Floyd Mayweather</h2>
         <p>
-            Floyd Mayweather is considered one of the greatest boxers of all time because of his fast and destructive combinations, as well as superhuman reflexes. In his first championship in 1998, he defeated Genaro Hernandez in the eighth round, despite his relative inexperience. After defending the title, Mayweather won the WBC lightweight title against Jose Luis Castillo, and then, less than three years later, won the welterweight title with a dominant victory over Arturo Gatti.
+            Floyd Mayweather is considered one of the greatest boxers of all time because of his fast and destructive combinations, 
+            as well as superhuman reflexes. In his first championship in 1998, he defeated Genaro Hernandez in the eighth round, 
+            despite his relative inexperience. After defending the title, Mayweather won the WBC lightweight title against Jose Luis Castillo, 
+            and then, less than three years later, won the welterweight title with a dominant victory over Arturo Gatti.
         </p>
         <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D0%B2%D0%B5%D0%B7%D0%B5%D1%80,_%D0%A4%D0%BB%D0%BE%D0%B9%D0%B4">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+    <img src="static/images/tyson.png">
+        <h2>Mike Tyson</h2>
+        <p>Mike Tyson, born in Brownsville, Brooklyn, has become one of the greatest boxers of recent decades. 
+        At the peak of his career, he was the most powerful attacker in the history of boxing. Tyson was a student of Cus 
+        D'Amato and under the guidance of trainers such as Kevin Rooney and Teddy Atlas. 
+        He became the youngest heavyweight champion by knocking out Trevor Berbick on November 22, 1986..</p>
+        <p><a class="btn btn-default" href="https://fight.ru/articles/top-7-luchshih-bokserov-vseh-vremen/">Learn more information about Mike Tyson  &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Microsoft Azure</h2>
