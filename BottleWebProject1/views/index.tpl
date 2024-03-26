@@ -7,11 +7,9 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Floyd Mayweather</h2>
         <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Floyd Mayweather is considered one of the greatest boxers of all time because of his fast and destructive combinations, as well as superhuman reflexes. In his first championship in 1998, he defeated Genaro Hernandez in the eighth round, despite his relative inexperience. After defending the title, Mayweather won the WBC lightweight title against Jose Luis Castillo, and then, less than three years later, won the welterweight title with a dominant victory over Arturo Gatti.
         </p>
         <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
     </div>
