@@ -45,6 +45,7 @@
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
+    <Content Include="static\images\ali.png" />
     <Content Include="static\images\floydmayweather2.png" />
     <Content Include="static\images\floydmayweather.png" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
