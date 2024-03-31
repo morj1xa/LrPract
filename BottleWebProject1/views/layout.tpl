@@ -9,7 +9,7 @@
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
-<body>
+<body style="background-color:#44475a">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -34,7 +34,7 @@
         {{!base}}
         <hr />
         <footer>
-            <p>&copy; {{ year }} - Boxing Legends</p>
+            <p style="color:white">&copy; {{ year }} - Boxing Legends</p>
         </footer>
     </div>
 
