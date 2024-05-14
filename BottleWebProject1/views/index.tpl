@@ -35,4 +35,12 @@
         of his license for refusing to participate in the Vietnam War. However, he came back and defeated Jerry Quarry, becoming one of the brightest stars in boxing.</p>
         <p><a class="btn btn-default" href="https://biographe.ru/sportsmeni/muhamed-ali/">Find out more information about the fighter &raquo;</a></p>
     </div>
+    <h3 style="color:white"> Ask a Question </h3>
+    <form action="/home" method="post">
+        <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
+        <p><input type="text" size="50" name="USERNAME" placeholder="Your username"></p>
+        <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
+        <p class="btn btn-default". ><input type="submit" value="Send"></p>
+    </form>
+
 </div>

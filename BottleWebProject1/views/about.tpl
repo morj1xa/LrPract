@@ -26,4 +26,3 @@ enhance their performance in the ring. Here are some common types of boxing equi
   <h4> Boxing shoes are designed to provide traction and support for quick footwork in the ring. They are lightweight and have good ankle support</h4>
    <img src="static/images/m_shoes.png">
   <p>
-
