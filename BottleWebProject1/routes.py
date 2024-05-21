@@ -43,3 +43,14 @@ def orders():
         message='Placed orders.',
         year=datetime.now().year
     )
+
+@route('/add_order')
+@view('orders')
+def orders():
+    """Renders the about page."""
+    return dict(
+        title='Orders',
+        message='Placed orders.',
+        year=datetime.now().year
+    )
+

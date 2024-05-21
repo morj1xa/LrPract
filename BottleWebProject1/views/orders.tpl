@@ -12,19 +12,31 @@
 </head>
 <body>
     <h1 style="color:white">Placed orders</h1>
-    <ul id="order-list">
-        <!-- Элементы списка будут добавлены динамически с помощью Python -->
-    </ul>
-    <h2 style="color:white">Add a new order:</h2>
+    
+    <!-- Форма для добавления нового заказа -->
     <form action="/add_order" method="post">
-        <label style="color:white" for="author">Author:</label><br>
-        <input type="text" id="author" name="author" required><br>
+        <label style="color:white" for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
         <label style="color:white" for="text">Text (Description):</label><br>
         <textarea id="text" name="text" required></textarea><br>
+        <label style="color:white" for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" required><br>
         <label style="color:white" for="date">Date:</label><br>
         <input type="date" id="date" name="date" required><br>
         <!-- Дополнительные поля, такие как Телефон, могут быть добавлены здесь -->
         <button type="submit">Post</button>
     </form>
+    
+    <!-- Список всех существующих заказов -->
+    <h2 style="color:white">Order list:</h2>
+    <ul>
+        <!-- В этом месте будут динамически добавляться элементы списка заказов с помощью Python -->
+        <!-- Пример одного заказа -->
+        <!-- <li>
+            <p><strong>Автор:</strong> Имя_автора</p>
+            <p><strong>Текст:</strong> Описание_заказа</p>
+            <p><strong>Дата:</strong> Дата_заказа</p>
+        </li> -->
+    </ul>
 </body>
 </html>

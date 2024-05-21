@@ -1,10 +1,12 @@
 from asyncio.windows_events import NULL
-from bottle import post, request
+from bottle import Bottle, post, request, template
 import re
 from datetime import datetime
 import pdb
 import os
 import json
+
+app = Bottle()
 
 @post('/home', method='post')
 def my_form():
@@ -50,3 +52,37 @@ def my_form():
 def mailCheck(email):
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return bool(re.match(pattern, email))
+
+orders = []
+
+@post('/orders', method='POST')
+def show_orders():
+    # Здесь вы можете добавить логику загрузки данных из файла, если это необходимо
+    # Пример:
+    # with open('orders.txt', 'r') as file:
+    #     orders = file.readlines()
+    orders = []  # Заглушка для списка заказов
+    return template('layout', title='Placed orders', orders=orders)
+
+# Обработчик POST-запроса для добавления нового заказа
+@post('/add_order', method='POST')
+def add_order():
+    name = request.forms.get('name')
+    text = request.forms.get('text')
+    phone = request.forms.get('phone')
+    date = request.forms.get('date')
+    
+    # Создание словаря с данными нового заказа
+    new_order = {'name': name, 'text': text, 'phone': phone, 'date': date}
+    
+    # Добавление нового заказа в список заказов
+    orders.append(new_order)
+    
+    with open('orders.txt', 'a') as file:
+        file.write(f"{name}, {text}, {phone}, {date}\n")
+        
+    # После записи данных в файл, обычно выполняется перенаправление на другую страницу или обновление текущей
+    return "Order added successfully!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
