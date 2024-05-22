@@ -1,5 +1,5 @@
 from asyncio.windows_events import NULL
-from bottle import Bottle, post, request, template
+from bottle import Bottle, post, redirect, request, template
 import re
 from datetime import datetime
 import pdb
@@ -55,13 +55,13 @@ def mailCheck(email):
 
 orders = []
 
-@post('/orders', method='POST')
+
+@post('/orders')
 def show_orders():
     # Здесь вы можете добавить логику загрузки данных из файла, если это необходимо
     # Пример:
-    # with open('orders.txt', 'r') as file:
-    #     orders = file.readlines()
-    orders = []  # Заглушка для списка заказов
+    with open('orders.txt', 'r') as file:
+         orders = file.readlines()
     return template('layout', title='Placed orders', orders=orders)
 
 # Обработчик POST-запроса для добавления нового заказа
@@ -72,6 +72,22 @@ def add_order():
     phone = request.forms.get('phone')
     date = request.forms.get('date')
     
+    if not re.match("^[a-zA-Z]+$", name):
+        return "Name should contain only English letters and no digits!"
+
+    # Проверка текста на длину не менее 3 символов
+    if len(text) < 3:
+        return "Text should be at least 3 characters long!"
+
+    # Проверка формата телефона
+    if not re.match("^\\+7 \\d{3} \\d{3} \\d{2} \\d{2}$", phone):
+        return "Phone format should be like: +7 000 000 00 00!"
+
+    # Проверка даты на то, что она не больше текущей даты
+    today = datetime.today().strftime('%Y-%m-%d')
+    if date > today:
+        return "Date should not be greater than today!"
+
     # Создание словаря с данными нового заказа
     new_order = {'name': name, 'text': text, 'phone': phone, 'date': date}
     

@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="color:white">Placed orders</title>
+    <title style="color:white">{{ title }}</title>
     <style>
         /* Добавьте стили здесь, если необходимо */
     </style>
 </head>
 <body>
-    <h1 style="color:white">Placed orders</h1>
+    <h1 style="color:white">{{ title }}</h1>
     
     <!-- Форма для добавления нового заказа -->
     <form action="/add_order" method="post">
@@ -29,14 +29,6 @@
     
     <!-- Список всех существующих заказов -->
     <h2 style="color:white">Order list:</h2>
-    <ul>
-        <!-- В этом месте будут динамически добавляться элементы списка заказов с помощью Python -->
-        <!-- Пример одного заказа -->
-        <!-- <li>
-            <p><strong>Автор:</strong> Имя_автора</p>
-            <p><strong>Текст:</strong> Описание_заказа</p>
-            <p><strong>Дата:</strong> Дата_заказа</p>
-        </li> -->
-    </ul>
+    
 </body>
 </html>
