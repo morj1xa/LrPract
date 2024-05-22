@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from asyncio.windows_events import NULL
 from bottle import Bottle, post, redirect, request, template
 import re
@@ -72,6 +73,25 @@ def add_order():
     phone = request.forms.get('phone')
     date = request.forms.get('date')
     
+    error_message = validate_order(name, text, phone, date)
+    if error_message:
+        return error_message
+    
+    # —оздание словар€ с данными нового заказа
+    new_order = {'name': name, 'text': text, 'phone': phone, 'date': date}
+    
+    # ƒобавление нового заказа в список заказов
+    orders.append(new_order)
+    
+    with open('orders.txt', 'a') as file:
+        file.write(f"{name}, {text}, {phone}, {date}\n")
+        
+    # ѕосле записи данных в файл, обычно выполн€етс€ перенаправление на другую страницу или обновление текущей
+    return "Order added successfully!"
+
+
+def validate_order(name, text, phone, date):
+    # ѕроверка имени на английские буквы и отсутствие цифр
     if not re.match("^[a-zA-Z]+$", name):
         return "Name should contain only English letters and no digits!"
 
@@ -88,17 +108,8 @@ def add_order():
     if date > today:
         return "Date should not be greater than today!"
 
-    # —оздание словар€ с данными нового заказа
-    new_order = {'name': name, 'text': text, 'phone': phone, 'date': date}
-    
-    # ƒобавление нового заказа в список заказов
-    orders.append(new_order)
-    
-    with open('orders.txt', 'a') as file:
-        file.write(f"{name}, {text}, {phone}, {date}\n")
-        
-    # ѕосле записи данных в файл, обычно выполн€етс€ перенаправление на другую страницу или обновление текущей
-    return "Order added successfully!"
+    return None
+
 
 if __name__ == '__main__':
     app.run(debug=True)
